@@ -1,0 +1,20 @@
+@use 'variables';
+@use 'mixins';
+@include mixins.album(variables.$dark_red,variables.$medium_cream);
+  $portadas: (
+        1: url(../multimedia/img/rock_pop/album/guns_roses.webp),
+        2: url(../multimedia/img/rock_pop/album/QUEEN.png),
+        3: url(../multimedia/img/rock_pop/album/Beatles.webp),
+        4: url(../multimedia/img/rock_pop/album/jackson.jpg),
+        5: url(../multimedia/img/rock_pop/album/nirvana.jpg),
+        6: url(../multimedia/img/rock_pop/album/Green_Day.png),
+        7: url(../multimedia/img/rock_pop/album/dua.jpg),
+        8: url(../multimedia/img/rock_pop/album/adele.jpg),
+        9: url(../multimedia/img/rock_pop/album/acdc.jpg),
+        10:url(../multimedia/img/rock_pop/album/sheeran.jpg),
+); 
+@each $orden, $imagen in $portadas {
+   .card#{$orden} {
+       background-image: $imagen;
+   }
+}

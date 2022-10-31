@@ -1,0 +1,6 @@
+@use 'variables';
+@use 'navbar-rock';
+@use 'album';
+@use 'footer-rock';
+@use 'mixins';
+@include mixins.body-generos(url(../multimedia/spectrum-gradient.svg),variables.$medium_cream);

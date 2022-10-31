@@ -1,0 +1,6 @@
+@use 'variables';
+@use 'navbarelectronic';
+@use 'albumelectronic';
+@use 'footerelectronic';
+@use 'mixins';
+@include mixins.body-generos(url(../multimedia/liquid-cheese.svg), variables.$soft_fuccia );

@@ -1,0 +1,64 @@
+
+@use 'variables';
+.form_section    {
+    /* border: 1px aqua solid; */
+    width: 100%;
+    height: 900px;
+    input{
+        background-color: variables.$dark_yellow;
+        font-size: .6em;
+        border: 2px variables.$black inset;
+        padding: 10px;
+    }
+    textarea{
+        background-color: variables.$dark_yellow;
+        border: 2px variables.$black inset;
+        border-radius: 15px;
+        width: 100%;
+    }
+  }
+  .contact    {
+    text-align: left;
+  }
+  fieldset    {
+    border-radius: 15px;
+    background-color: variables.$dark_mostaza;
+    padding: 20px;
+    max-width: 650px;
+    height: 80%;
+    font-size: 1.5em;
+    margin: 80px auto 0;
+    @media (max-width: 1090px){
+          width: 80%;
+      }
+  }
+  .box  {
+    width: 100%;
+    border-radius: 15px;
+    height: 50px;
+  }
+  #coment {
+    resize: none;
+    font-size: .6em;
+    padding: 10px;
+  }
+  #send {
+    margin-top: 55px;
+    margin-left: 25%;
+    height: 60px;
+    width: 325px;
+    font-size: 1em;
+    background-color: variables.$Brown;
+    color: variables.$soft_gray;
+    border-radius: 20px;
+    &:hover{
+        background-color:variables.$dark_yellow;
+    }
+    @media (max-width: 750px) {
+          width: 200px;
+          margin-left: 3.5em;
+      }
+    @media (max-width: 425px) {
+        margin-left: 2em;
+    }
+  }

@@ -1,0 +1,18 @@
+@use 'variables';
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body    {
+    background-color: variables.$black;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    &::-webkit-scrollbar{
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background: variables.$dark_yellow;
+      border-radius: 10px;
+    }
+  }

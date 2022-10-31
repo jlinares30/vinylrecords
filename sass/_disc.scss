@@ -1,0 +1,222 @@
+@use 'variables';
+.vinyl_section  {
+    position: relative;
+    background-image: url(./Multimedia/endless-constellation\ \(1\).svg);
+    margin: auto;
+    display:grid;
+    margin-top: 75px;
+    grid-template-columns: repeat(3, 1fr);
+    height: 900px;
+    text-align: center;
+    box-sizing: border-box;
+    @media (max-width: 1090px){
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 1fr);
+          height: 1000px;
+        }
+  }
+  /* -----------contenedor 1--------- */
+  .contenedor1{
+    background-image: url(../multimedia/img/RB_soul/pexels-wendy-wei-1918159.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 0 50% 50% 0;
+    position: relative;
+    place-self: center;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(to left,rgba(0, 0, 0, 0.815), rgba(255, 255, 255, 0) );
+    }
+    &:hover .contenido h2{
+        transition: .5s;
+        opacity: 1;
+    }
+    &:hover .contenido{
+        background: rgba(0,0,0,0.5);
+        border-radius: 0 50% 50% 0;
+        height: 100%;
+        width: 100%;
+    }
+    @media (max-width: 1090px){
+        height: 250px;
+        border-radius: 0;
+        &::after{
+            background: linear-gradient(to top,rgba(0, 0, 0, 0.815), rgba(255, 255, 255, 0) );
+        }
+        &:hover .contenido{
+            border-radius: 0;
+        }
+    }
+  }
+  .contenido{  
+    h2{
+    color: variables.$soft_gray;
+    text-decoration: none;
+    position: absolute;
+    font-size: 2em;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+    left: 20%;
+    opacity: 0;
+  }
+}
+/* --------contenedor 2---------- */
+.contenedor2{
+    background-image: url(../multimedia/img/rock_pop/pexels-thibault-trillet-167589.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 0 0 50% 50%;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(to top,rgba(0, 0, 0, 0.815), rgba(255, 255, 255, 0) );
+    }
+    &:hover .contenido{
+        background: rgba(0,0,0,0.5);
+        border-radius: 0 0 50% 50%;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover .contenido h2{
+        transition: .5s;
+        opacity: 1;
+    }
+    @media (max-width: 1090px){
+        height: 250px;
+        border-radius: 0;
+        &:hover .contenido{
+            border-radius: 0;
+        }
+    }
+  }
+  /* --------contenedor 3--------- */
+.contenedor3{
+    background-image: url(https://media.istockphoto.com/photos/conductor-directing-symphony-orchestra-picture-id490338206?b=1&k=20&m=490338206&s=612x612&w=0&h=blu4c7NSHEaKxW2y4LW7zJ51FQmqWbtsTcclWOxlEPw=);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.815), #ffffff00 );
+    }
+    &:hover .contenido{
+        background: rgba(0,0,0,0.5);
+        border-radius: 50% 50% 0 0;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover .contenido h2{
+        transition: .5s;
+        opacity: 1;
+    }
+    @media (max-width: 1090px){
+        height: 250px;
+        border-radius: 0;
+        &::after{
+            background: linear-gradient(to top,rgba(0, 0, 0, 0.815), rgba(255, 255, 255, 0) );
+        }
+        &:hover .contenido{
+            border-radius: 0;
+        }
+    }
+  }
+  .card p{
+    text-shadow: -3px 5px 6px #000000;
+  }
+  .vinyl{
+    background: -moz-radial-gradient(center, rgba(0, 0, 0, 0.815), 0%, #ffffff00 0%, rgba(0, 0, 0, 0.815) 100%);
+    background: -webkit-radial-gradient(center, rgba(0, 0, 0, 0.815), #ffffff00 0%, rgba(0, 0, 0, 0.815) 100%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.815), #ffffff00 0%, rgba(0, 0, 0, 0.815) 100%);
+    @media (max-width: 1090px){
+        display: none;
+    }
+  }
+  .img_vinyl  {
+    border-radius: 50%;
+    width: 58%;
+    animation-name: girarVinyl;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @media (max-width:1520px){
+          margin: 40px 0;
+          transition: all .5s;
+      }
+}
+@keyframes girarVinyl{
+  0% {
+    transform:rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+  .middle_group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+/* ----------contenedor 4--------- */
+.contenedor4{
+    background-image: url(../multimedia/img//electronic/pexels-kelian-pfleger-7367079.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 50% 0 0 50%;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(to right,rgba(0, 0, 0, 0.815), rgba(255, 255, 255, 0) );
+    }
+    &:hover .contenido{
+        background: rgba(0,0,0,0.5);
+        border-radius: 50% 0 0 50%;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover .contenido h2{
+        transition: .5s;
+        opacity: 1;
+    }
+    @media (max-width: 1090px){
+        height: 250px;
+        border-radius: 0;
+        margin-bottom: -50px;
+        &::after{
+        background: linear-gradient(to top,rgba(0, 0, 0, 0.815), rgba(255, 255, 255, 0) );
+        }
+        &:hover .contenido{
+        border-radius: 0;
+        }
+    }
+  }
+  .contenedor_gradiente{
+    background: linear-gradient(to rigth, white, black);
+  }
+
+  

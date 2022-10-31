@@ -1,0 +1,6 @@
+@use 'variables';
+@use 'navbar-soundtrack';
+@use 'album-soundtrack';
+@use 'footer-soundtrack';
+@use 'mixins';
+@include mixins.body-generos(url(../multimedia/endless-constellation.svg),variables.$medium_cream);

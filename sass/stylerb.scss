@@ -1,0 +1,6 @@
+@use 'variables';
+@use 'navbar-rb';
+@use 'album-rb';
+@use 'footer-rb';
+@use 'mixins';
+@include mixins.body-generos(url(../multimedia/dragon-scales.svg),variables.$medium_cream);

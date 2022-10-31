@@ -1,0 +1,20 @@
+@use 'variables';
+@use 'mixins';
+@include mixins.album(variables.$dark_orange,variables.$soft_gray_rb);
+  $portadas: (
+        1: url(../multimedia/img/rb_soul/album/weeknd.jpeg),
+        2: url(../multimedia/img/rb_soul/album/amy.jpg),
+        3: url(../multimedia/img/rb_soul/album/beyonce.jpeg),
+        4: url(../multimedia/img/rb_soul/album/brown.webp),
+        5: url(../multimedia/img/rb_soul/album/bruno.jpg),
+        6: url(../multimedia/img/rb_soul/album/doja.jpeg),
+        7: url(../multimedia/img/rb_soul/album/james.webp),
+        8: url(../multimedia/img/rb_soul/album/legend.jpg),
+        9: url(../multimedia/img/rb_soul/album/stevie.jpg),
+        10:url(../multimedia/img/rb_soul/album/hozier.jpg),
+); 
+@each $orden, $imagen in $portadas {
+   .card#{$orden} {
+       background-image: $imagen;
+   }
+}

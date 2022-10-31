@@ -1,0 +1,30 @@
+@use 'variables';
+@use 'mixins';
+footer  {
+    @include mixins.footer(variables.$soft_black);
+    i {
+      @include mixins.footer-i(variables.$soft_gray)
+    }
+    p{
+      @include mixins.footer-p (variables.$soft_gray);
+      @media (max-width:820px){
+          font-size: 20px;
+        }
+      }
+    }
+  .arrow{
+    position: absolute;
+    bottom: 25px;
+    right: 50%;
+    color: variables.$soft_gray;
+    @media (max-width:820px){
+        bottom: 100px;
+        right: 0;
+  }
+}
+  .bxs-up-arrow:hover{
+    color: variables.$dark_yellow;
+  }
+@include mixins.redes
+ 
+  

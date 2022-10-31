@@ -1,0 +1,20 @@
+@use 'variables';
+@use 'mixins';
+@include mixins.album(variables.$verydark_green_blue,variables.$soft_green_blue);
+  $portadas: (
+        1: url(../multimedia/img/original_sountrack/piratas.jpg),
+        2: url(../multimedia/img/original_sountrack/star_wars.jpg),
+        3: url(../multimedia/img/original_sountrack/panther.jpeg),
+        4: url(../multimedia/img/original_sountrack/avatar.jpg),
+        5: url(../multimedia/img/original_sountrack/Grease.jpg),
+        6: url(../multimedia/img/original_sountrack/007.jpg),
+        7: url(../multimedia/img/original_sountrack/lalaland.jpg),
+        8: url(../multimedia/img/original_sountrack/up.jpeg),
+        9: url(../multimedia/img/original_sountrack/ab67616d0000b2739ca20352ead0cc8dccdf7951.jpeg),
+        10:url(../multimedia/img/original_sountrack/saturday.jpg),
+); 
+@each $orden, $imagen in $portadas {
+   .card#{$orden} {
+       background-image: $imagen;
+   }
+}
